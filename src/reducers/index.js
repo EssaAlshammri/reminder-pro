@@ -15,7 +15,6 @@ const removeById = (state = [], id) => {
     const reminders = state.filter(reminder => {
         return reminder.id !== id;
     })
-    console.log('new reduced reminders after deletion', reminders);
     return reminders;
 }
 
