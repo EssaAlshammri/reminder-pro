@@ -1,4 +1,4 @@
-import { ADD_REMAINDER } from '../constants';
+import { ADD_REMINDER } from '../constants';
 
 
 const reminder = (action) => {
@@ -11,7 +11,7 @@ const reminder = (action) => {
 const reminders = (state = [], action) => {
     let reminders = null
     switch (action.type) {
-        case ADD_REMAINDER:
+        case ADD_REMINDER:
             reminders = [...state, reminder(action)]
             console.log('reminders', reminders)
             return reminders;
