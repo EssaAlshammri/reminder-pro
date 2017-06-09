@@ -17,6 +17,7 @@ class App extends Component {
     }
 
     render() {
+        console.log('this.props', this.props)
         return (
             <div className='App'>
                 <div className='title'>Reminder Pro </div>
@@ -43,4 +44,10 @@ function mapDispachToProps(dispach) {
     return bindActionCreators({ addReminder }, dispach)
 }
 
-export default connect(null, mapDispachToProps)(App);
+function mapStateToProps(state) {
+    return {
+        reminders: state
+    }
+}
+
+export default connect(mapStateToProps, mapDispachToProps)(App);
